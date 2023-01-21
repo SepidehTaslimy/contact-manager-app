@@ -1,13 +1,26 @@
+import { useState } from "react";
 
-import './App.css';
-import Navbar from "./components/Navbar"
+import {
+  AddContact,
+  Contact,
+  Contacts,
+  EditContact,
+  Navbar,
+  ViewContact,
+} from "./components";
 
-const App=()=> {
+import "./App.css";
+
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  const [getContacts, setContacts] = useState([]);
+
   return (
     <div className="App">
-      <h3>اپلیکیشن مدیریت مخاطبین</h3>
+      <Navbar />
+      <Contacts contacts={getContacts} loading={loading} />
     </div>
   );
-}
+};
 
 export default App;
