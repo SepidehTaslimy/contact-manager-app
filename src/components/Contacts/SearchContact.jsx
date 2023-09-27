@@ -1,6 +1,6 @@
 const SearchContact=()=>{
     return(
-        <div className="input-group mx-2 w-75" dir="ltr">
+      <div className="input-group mx-2 w-75" dir="ltr">
         <span
           className="input-group-text"
           id="basic-addon1"
